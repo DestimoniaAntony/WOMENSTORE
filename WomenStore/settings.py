@@ -125,14 +125,10 @@ USE_TZ = True
 # MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 STATIC_URL = '/static/'  # URL to access static files
-
-# Directories where static files are located
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'store_app', 'static'),  # Adjust this path as necessary
+    os.path.join(BASE_DIR, 'assets'),  # Path to your assets directory containing static files
 ]
-
-# Collect static files to this directory for deployment
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets') 
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
