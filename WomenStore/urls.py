@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('store_app.urls')),
     # path('',views.index,name='index')
+    # <a href="combine.html">Combine</a>
 
 ]

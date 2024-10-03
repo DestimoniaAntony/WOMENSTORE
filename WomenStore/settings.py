@@ -23,11 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-gmx+c0vsb(1j&o8166c3fdw9rj9sv4q01mfpfh3p&(x=8!$#or'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# Set to False in production
-DEBUG = False
+DEBUG = True
 
-# Define allowed hosts for your domain or IP
-ALLOWED_HOSTS = ['yourdomain.com', 'www.yourdomain.com'] 
+ALLOWED_HOSTS = []
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'WomenStore.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'store_app', 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,19 +116,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS=[
-#     os.path.join(BASE_DIR,'static')
-# ]
-# STATIC_ROOT=os.path.join(BASE_DIR,'assets')
-# MEDIA_URL='/media/'
-# MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-
-STATIC_URL = '/static/'  # URL to access static files
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'assets'),  # Path to your assets directory containing static files
+STATIC_URL = '/static/'
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'static')
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+STATIC_ROOT=os.path.join(BASE_DIR,'assets')
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
