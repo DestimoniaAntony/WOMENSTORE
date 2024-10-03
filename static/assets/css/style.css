@@ -1610,19 +1610,9 @@ input {
   margin-right: 35px;
   border-right: 1px solid #e5e5e5;
 }
-.main-menu ul {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
 .main-menu ul li {
-  list-style: none;
-  padding: 0 10px; /* Adjust the padding to fit your design */
-}
-.main-menu ul li {
-  list-style: none;
-  padding: 0 10px;
+  display: inline-block;
+  position: relative;
 }
 .main-menu ul li:not(:last-child) {
   margin-right: 15px;
